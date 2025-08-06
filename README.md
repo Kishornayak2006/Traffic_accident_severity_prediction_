@@ -8,8 +8,7 @@
 
 
 ## Web Application: 
-Built a web application using Streamlit and deployed.
-
+This application is builded to check the accidents severity.
 
 
 
