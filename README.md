@@ -7,7 +7,7 @@
 ## Web Application: 
 Built a web application using Streamlit and deployed on Heroku.
 
-<img width="800" alt="image" src="doc/Mysuru.gif">
+<img width="800" alt="image" src="doc/theme.jpg">
 
 
 ## Check it out
