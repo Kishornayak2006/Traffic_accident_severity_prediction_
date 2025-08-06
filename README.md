@@ -1,4 +1,4 @@
-**# Road Traffic Severity Prediction**
+# Road Traffic Severity Prediction
 ![Python](https://img.shields.io/badge/Python-3.8.10-blue.svg)
 ![Machine Learning](https://img.shields.io/badge/Machine%20Learning-XGBoost-orange)
 ![Frontend](https://img.shields.io/badge/Framework-Streamlit-red)
