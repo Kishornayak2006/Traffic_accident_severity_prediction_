@@ -44,7 +44,7 @@ This data set is [Road Traffic Accidents](https://www.kaggle.com/saurabhshahane/
 * Clone this repository and check the ```requirements.txt```:
     ```shell
     git clone https://github.com/kishornayak2006/Traffic_accident_severity_prediction_
-    cd Accident-Severity-Prediction
+    cd Traffic_accident_severity_prediction_
     pip install -r requirements.txt
     ```
 * Simply run:    
