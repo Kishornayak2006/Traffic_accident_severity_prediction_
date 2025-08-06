@@ -7,7 +7,14 @@
 ## Web Application: 
 Built a web application using Streamlit and deployed.
 
+
+
+
 <img width="800" alt="image" src="doc/Mysuru.gif">
+
+
+
+
 
 
 
