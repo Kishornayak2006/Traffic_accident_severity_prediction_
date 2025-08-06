@@ -4,6 +4,9 @@
 ![Frontend](https://img.shields.io/badge/Framework-Streamlit-red)
 ![Deployment](https://img.shields.io/badge/Cloud-Heroku-purple)
 
+<img width="800" alt="image" src="doc/theme.jpg">
+
+
 ## Web Application: 
 Built a web application using Streamlit and deployed.
 
