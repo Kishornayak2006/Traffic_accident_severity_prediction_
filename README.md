@@ -10,7 +10,7 @@ Built a web application using Streamlit and deployed.
 
 
 
-<img width="800" alt="image" src="doc/theme.jpg">
+<img width="800" alt="image" src="doc/Mysuru.gif">
 
 
 
