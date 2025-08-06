@@ -5,7 +5,7 @@
 ![Deployment](https://img.shields.io/badge/Cloud-Heroku-purple)
 
 ## Web Application: 
-Built a web application using Streamlit and deployed on Heroku.
+Built a web application using Streamlit and deployed.
 
 <img width="800" alt="image" src="doc/Mysuru.gif">
 
