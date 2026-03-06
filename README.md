@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Road Traffic Severity Prediction
 ![Python](https://img.shields.io/badge/Python-3.8.10-blue.svg)
 ![Machine Learning](https://img.shields.io/badge/Machine%20Learning-XGBoost-orange)
@@ -70,3 +71,6 @@ This data set is [Road Traffic Accidents](https://www.kaggle.com/saurabhshahane/
 
 
 
+=======
+# Traffic_accident_severity_prediction_
+>>>>>>> 2203c3718ec426363354a3366ce680e9c668951d
