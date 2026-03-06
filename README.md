@@ -9,7 +9,7 @@
 
 Try the deployed application here:
 
-🔗 https://your-app-name.streamlit.app
+🔗 https://traffic-accident-severity-prediction-s.streamlit.app/
 
 
 ## Web Application: Built a web application using Streamlit and deployed on Streamlit. 
