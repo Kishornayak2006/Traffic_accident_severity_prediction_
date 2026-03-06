@@ -1,18 +1,16 @@
-import joblib
+import xgboost as xgb
 import numpy as np
 from config import *
-import pandas as pd
 
 def get_prediction(model, data):
-    """
-    Predict the class of a given data point
-    """
-    prediction = model.predict(data)[0]
-    return Accident_severity_dict[prediction]
 
+    # convert input to DMatrix
+    dmatrix = xgb.DMatrix(data)
 
+    # model prediction
+    pred = model.predict(dmatrix)
 
+    # get class index
+    pred_class = int(np.argmax(pred))
 
-
-
-
+    return Accident_severity_dict[pred_class]
