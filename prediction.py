@@ -4,13 +4,11 @@ from config import *
 
 def get_prediction(model, data):
 
-    # convert input to DMatrix
     dmatrix = xgb.DMatrix(data)
 
-    # model prediction
     pred = model.predict(dmatrix)
 
-    # get class index
     pred_class = int(np.argmax(pred))
 
-    return Accident_severity_dict[pred_class]
+    # Safe dictionary lookup
+    return Accident_severity_dict.get(pred_class, "Prediction Error")
