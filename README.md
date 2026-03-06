@@ -1,76 +1,256 @@
-<<<<<<< HEAD
-# Road Traffic Severity Prediction
-![Python](https://img.shields.io/badge/Python-3.8.10-blue.svg)
+# 🚦 Traffic Accident Severity Prediction
+
+![Python](https://img.shields.io/badge/Python-3.10-blue)
 ![Machine Learning](https://img.shields.io/badge/Machine%20Learning-XGBoost-orange)
-![Frontend](https://img.shields.io/badge/Framework-Streamlit-red)
-![Deployment](https://img.shields.io/badge/Cloud-Heroku-purple)
+![Framework](https://img.shields.io/badge/Framework-Streamlit-red)
+![Status](https://img.shields.io/badge/Project-Active-green)
 
-## Web Application: 
-Built a web application using Streamlit and deployed on Heroku.
+## Web Application: Built a web application using Streamlit and deployed on Heroku. 
+<img width="800" alt="image" src="doc/theme.png">
 
-<img width="800" alt="image" src="doc/Demo.gif">
+---
 
+# 📌 Project Overview
 
-## Check it out
-https://traffic-severity-prediction.herokuapp.com/
+Road traffic accidents are one of the major causes of injuries and fatalities worldwide. Predicting accident severity can help authorities and policymakers take preventive measures and improve road safety.
 
-## Introduction
-With the increasing of road traffic infrastructures, motor vehicles, drivers, and traffic flow, the role of road traffic in supporting and guiding economic and social development is becoming more and more obvious. As a result, road traffic safety has increasingly become a key issue in concerning the safety of people’s lives and property, as well as affecting the quality and efficiency of economic and social development. Road traffic accidents are the process of simultaneous damage of people or things, which caused by the coupling imbalance of dynamic and static factors such as human, vehicle, road, and environment. Therefore, it is necessary to study the influencing factors, as well as the classification and identification model of the severity of road traffic accident, so as to pave the way for improving the safety level of road traffic.
+This project builds a **Machine Learning model using XGBoost** to predict the **severity of road traffic accidents** based on multiple environmental, vehicle, and driver-related factors.
 
-## Problem Statement: 
-This is a multi-class classification problem where we are predicting the severity of accident :
-* Slight Injury
-* Fatal Injury
-* Serious Injury
+The model is deployed as an **interactive web application using Streamlit**.
 
-based on the other 31 features.
+---
 
-## Description: 
-This data set is [Road Traffic Accidents](https://www.kaggle.com/saurabhshahane/road-traffic-accidents) from Kaggle. The data set has been prepared from manual records of road traffic accident of the year 2017-20. All the sensitive information have been excluded during data encoding and finally it has 32 features and 12316 instances of the accident.
+# 🧠 Problem Statement
 
-### Exploratory Data Analysis:
-* Exploratory Data Analysis is the first step of understanding your data and acquiring domain knowledge. 
+This is a **Multi-Class Classification Problem** where we predict accident severity into three categories:
 
-### Data Preprocessing:
-* The dataset has around 16 features with missing values. This missing values are imputed using **Predictive Imputation** technique where I used the known values to predict the missing values.
+• Slight Injury
+• Serious Injury
+• Fatal Injury
 
-### Handeling Data Imbalance:
-* The Dataset was quite imbalanced with 10415 records with Slight injury, 1743 records withSerious injury anf just 158 records with Fatal injury.
-* I used **SMOTE**, Random Under/Over Sampling, NearMiss method for balancing the dataset. 
+based on **31 input features** such as:
 
-### Features Selection:
-* On using **Correlation** and **Chi-square** method, I found that some features were moderately correlated so I removed the features with collinearity. Finally, we use 16 feature for training process.
+* Time of accident
+* Day of week
+* Driver age
+* Driving experience
+* Road surface type
+* Weather conditions
+* Type of collision
+* Number of vehicles involved
+* Number of casualties
+* Vehicle movement
 
-### Model Training:
-* On training my model using several classification algorithms such as *XGBoost*, *Random Forest*, *Extra Trees*, *Decision Trees*, the model trained with **XGBoost** gave good results and less memory. 
-* Used **KFold** with 5 splits cross validation with hyper-parameter tuning on XGBoost Classifier (baseline model) using **GridSearchCV**.
-* Also, I found that my baseline model (XgBoost Classifier) was overfitting the dataset. On investigation I found that the dataset was affected by **Curse of Dimensionality**. So I reduced the dimensions and trained my model again.
-* After retraining my model, I found that it was generalizing well with an accuracy of **74%**.
-* As per the problem statement I used **F1 Score** as the evaluation metric for my model.
+---
 
-### Explainable: 
-* Used **SHAP** based on test prediction.
+# 📊 Dataset
 
-## Installation
+Dataset Source:
+Kaggle – **Road Traffic Accidents Dataset**
 
-* Clone this repository and check the ```requirements.txt```:
-    ```shell
-    git clone https://github.com/sonnguyen129/Accident-Severity-Prediction
-    cd Accident-Severity-Prediction
-    pip install -r requirements.txt
-    ```
-* Simply run:    
-    ```shell
-    streamlit run app.py
-    ```
+The dataset contains **12,316 accident records** with **32 features**.
 
+### Class Distribution
 
+| Severity       | Records |
+| -------------- | ------- |
+| Slight Injury  | 10,415  |
+| Serious Injury | 1,743   |
+| Fatal Injury   | 158     |
 
+The dataset is **highly imbalanced**, which required special preprocessing techniques.
 
+---
 
+# 🔍 Exploratory Data Analysis (EDA)
 
+Exploratory Data Analysis was performed to understand:
 
+* Accident patterns
+* Driver behavior
+* Environmental factors affecting accident severity
+* Feature correlations
 
-=======
-# Traffic_accident_severity_prediction_
->>>>>>> 2203c3718ec426363354a3366ce680e9c668951d
+Visualization techniques helped identify key contributing factors.
+
+---
+
+# 🧹 Data Preprocessing
+
+The dataset contained several missing values and categorical variables.
+
+Steps performed:
+
+• Handling missing values using **Predictive Imputation**
+• Label encoding categorical features
+• Removing highly correlated features
+• Feature scaling and transformation
+
+---
+
+# ⚖️ Handling Data Imbalance
+
+Since the dataset was highly imbalanced, the following techniques were applied:
+
+• **SMOTE (Synthetic Minority Oversampling Technique)**
+• Random Over Sampling
+• Random Under Sampling
+• NearMiss Method
+
+This helped improve model performance on minority classes.
+
+---
+
+# 🎯 Feature Selection
+
+Feature selection was performed using:
+
+• **Correlation Analysis**
+• **Chi-Square Test**
+
+Highly correlated features were removed to avoid multicollinearity.
+
+Finally, **16 most important features** were used for model training.
+
+---
+
+# 🤖 Model Training
+
+Several machine learning algorithms were tested:
+
+• Decision Tree
+• Random Forest
+• Extra Trees
+• XGBoost
+
+Among these, **XGBoost performed the best**.
+
+Techniques used:
+
+• **5-Fold Cross Validation**
+• **GridSearchCV for Hyperparameter Tuning**
+
+Final model achieved:
+
+🎯 **Accuracy: ~74%**
+
+Evaluation metric used:
+
+**F1 Score**
+
+---
+
+# 🔎 Explainable AI
+
+To understand the model predictions, **SHAP (SHapley Additive Explanations)** was used for interpretability.
+
+This helps explain:
+
+* Which features contribute most to accident severity
+* How each feature influences predictions
+
+---
+
+# 🌐 Web Application
+
+An interactive **Streamlit web application** was developed to allow users to input accident conditions and predict severity instantly.
+
+Users can:
+
+• Enter accident details
+• Submit the form
+• Get real-time accident severity prediction
+
+---
+
+# 🛠️ Tech Stack
+
+### Programming Language
+
+Python
+
+### Libraries
+
+* Pandas
+* NumPy
+* Scikit-learn
+* XGBoost
+* Joblib
+
+### Framework
+
+Streamlit
+
+---
+
+# ⚙️ Installation
+
+Clone the repository:
+
+```
+git clone https://github.com/Kishornayak2006/Traffic_accident_severity_prediction_.git
+```
+
+Navigate to the project folder:
+
+```
+cd Traffic_accident_severity_prediction_
+```
+
+Install dependencies:
+
+```
+pip install -r requirements.txt
+```
+
+Run the Streamlit application:
+
+```
+streamlit run app.py
+```
+
+---
+
+# 📂 Project Structure
+
+```
+Traffic_accident_severity_prediction_
+│
+├── app.py
+├── prediction.py
+├── config.py
+├── requirements.txt
+│
+├── model
+│   ├── model_xgb.bin
+│   └── checkpoint.pkl
+│
+├── doc
+│   └── theme.png
+│
+└── README.md
+```
+
+---
+
+# 🚀 Future Improvements
+
+• Deploy the application on **Streamlit Cloud / Render**
+• Improve model performance with **advanced feature engineering**
+• Add **visual analytics dashboard**
+• Implement **real-time accident risk prediction**
+
+---
+
+# 👨‍💻 Author
+
+**Kishor C**
+
+GitHub:
+https://github.com/Kishornayak2006
+
+---
+
+# ⭐ If you like this project
+
+Give this repository a ⭐ on GitHub!
