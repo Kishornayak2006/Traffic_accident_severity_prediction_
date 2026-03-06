@@ -5,7 +5,14 @@
 ![Framework](https://img.shields.io/badge/Framework-Streamlit-red)
 ![Status](https://img.shields.io/badge/Project-Active-green)
 
-## Web Application: Built a web application using Streamlit and deployed on Heroku. 
+## 🌐 Live Demo
+
+Try the deployed application here:
+
+🔗 https://your-app-name.streamlit.app
+
+
+## Web Application: Built a web application using Streamlit and deployed on Streamlit. 
 <img width="800" alt="image" src="doc/theme.png">
 
 ---
@@ -235,7 +242,6 @@ Traffic_accident_severity_prediction_
 
 # 🚀 Future Improvements
 
-• Deploy the application on **Streamlit Cloud / Render**
 • Improve model performance with **advanced feature engineering**
 • Add **visual analytics dashboard**
 • Implement **real-time accident risk prediction**
